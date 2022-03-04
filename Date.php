@@ -54,7 +54,7 @@ class Date
         $number_of_days = $this->TotalDays(date('Y'), $month);
         $dates = [];
         for($i = 1; $i <= $number_of_days; $i++){
-            $dates[] = date("Y-m-$i");
+            $dates[] = date("Y-m-d", strtotime("Y-$month-$i"));
         }
         return $dates;
     }
