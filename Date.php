@@ -44,6 +44,11 @@ class Date
         return date('F');
     }
 
+    public function Tommorow()
+    {
+        return date('Y-m-d', strtotime("+1 day"));
+    }
+
     public function TotalDays($year, $month)
     {
         return cal_days_in_month(CAL_GREGORIAN, $month, $year);
